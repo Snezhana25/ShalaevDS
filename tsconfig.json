@@ -50,5 +50,9 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
+  },
+  "paths": {
+    "@core/*": ["src/core/*"],
+    "@store/*": ["src/app/shared/store/*"]
   }
 }

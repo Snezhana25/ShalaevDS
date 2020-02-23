@@ -5,6 +5,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 import { CoreModule } from '@app/core';
+import { CoreStoreModule } from '../../src/app/shared/store';
+
 import { i18nMultiModuleLoaderFactory } from '@app/core/i18n';
 import { AppLayoutModule } from '@app/layout';
 import { AppComponent } from './app.component';
@@ -27,8 +29,9 @@ import { HomeModule } from './components/home/home.module';
 
     AppRoutingModule,
     CoreModule.forRoot(),
+    CoreStoreModule,
     AppLayoutModule,
-    HomeModule
+    HomeModule,
   ],
   declarations: [
     AppComponent,
@@ -36,4 +39,4 @@ import { HomeModule } from './components/home/home.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
